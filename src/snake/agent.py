@@ -2,9 +2,9 @@ import torch
 import random
 import numpy as np
 from collections import deque
-from src.snake.snake_game_robot import SnakeGameAI, Direction, Point
-from src.snake.model import Linear_QNet, QTrainer
-from src.snake.helper import plot
+from snake.snake_game_robot import SnakeGameAI, Direction, Point
+from snake.model import Linear_QNet, QTrainer
+from snake.helper import plot
 
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
@@ -142,3 +142,6 @@ def train():
             plot_mean_scores.append(mean_score)
 
             plot(plot_scores, plot_mean_scores)
+
+if __name__ == '__main__':
+    train()
