@@ -1,0 +1,28 @@
+[project]
+name = "snake_neural_network"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "rafabandoni",email = "rafagbandoni@gmail.com"}
+]
+readme = "README.md"
+
+[tool.poetry.scripts]
+train-snake = "snake.agent:train"
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+pygame = ">=2.6.1,<3.0.0"
+torch = ">=2.6.0,<3.0.0"
+torchvision = ">=0.21.0,<0.22.0"
+torchaudio = ">=2.6.0,<3.0.0"
+matplotlib = ">=3.10.0,<4.0.0"
+ipython = ">=8.32.0,<9.0.0"
+
+[tool.poetry]
+packages = [{include = "snake", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
