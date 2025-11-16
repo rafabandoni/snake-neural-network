@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 
 [tool.poetry.scripts]
-train-snake = "snake.agent:train"
+train-snake = "snake.__main__:main"
 
 [tool.poetry.dependencies]
 python = ">=3.12"
